@@ -1,0 +1,25 @@
+<p>updateapi works!</p>
+
+
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+    <label for="id">ID:</label>
+    <input type="number" formControlName="id" />
+  
+    <label for="name">Name:</label>
+    <input type="text" formControlName="name" />
+  
+    <label for="age">Age:</label>
+    <input type="number" formControlName="age" />
+  
+    <button type="submit">{{ isEditMode ? 'Update Person' : 'Add Person' }}</button>
+  </form>
+  
+  <hr>
+  
+  <h2>Persons List</h2>
+  <div *ngFor="let person of personsList">
+    <span>{{ person.name }} (ID: {{ person.id }})</span>
+    <button (click)="onDelete(person.id)">Delete</button>
+    <button (click)="onEdit(person.id)">Edit</button>
+  </div>
+  

@@ -1,0 +1,13 @@
+<p>emailsender works!</p>
+<div>
+    <label>To:</label>
+    <input [(ngModel)]="to" />
+    <br />
+    <label>Subject:</label>
+    <input [(ngModel)]="subject" />
+    <br />
+    <label>Body:</label>
+    <textarea [(ngModel)]="body"></textarea>
+    <br />
+    <button (click)="sendEmail()">Send Email</button>
+  </div>
